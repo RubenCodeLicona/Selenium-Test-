@@ -18,13 +18,13 @@ driver.get("https://www.mercadolibre.com")
 
 WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.XPATH, "/html/body/nav/ul/li[11]/a"))
-    ).click()
+    ).click() #Selecciona el pais (México)
 
-input_element = driver.find_element(By.NAME, "as_word" ) #Buscar un elemento  (CLASS_NAME)
+input_element = driver.find_element(By.NAME, "as_word" ) #Selecciona la barra de busqueda 
 input_element.clear() #limpia el campo
 input_element.send_keys(Keys.CONTROL + "a")  # Selecciona todo
-input_element.send_keys(Keys.DELETE)         # Elimina el texto
-input_element.send_keys("Playstation 5" + Keys.ENTER) #introducir texto en un elemento
+input_element.send_keys(Keys.DELETE)         # Elimina todo el texto
+input_element.send_keys("Playstation 5" + Keys.ENTER) #introducir texto y dar clic 
 
 
 try:
@@ -33,20 +33,20 @@ try:
     ).click()
 except:
     pass  
-WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html/body/main/div/div[2]/aside/section[2]/div[5]/ul/li[1]/a/span[1]"))).click()
+WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html/body/main/div/div[2]/aside/section[2]/div[5]/ul/li[1]/a/span[1]"))).click() #Nuevo
 
-WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html/body/main/div/div[2]/aside/section[2]/div[11]/ul/li[1]/a/span[2]"))).click()
+WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html/body/main/div/div[2]/aside/section[2]/div[11]/ul/li[1]/a/span[2]"))).click() #Local
 
 
-sort_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html/body/main/div/div[2]/section/div[2]/div/div/div/div[2]/div/div/button/span")))
+sort_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html/body/main/div/div[2]/section/div[2]/div/div/div/div[2]/div/div/button/span"))) #Selecciona el menu desplegable de las opciones 
 sort_button.click()
-WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html/body/main/div/div[2]/section/div[2]/div/div/div/div[2]/div/div/div/div/div/ul/li[3]/div/div/span"))).click() #Seleccionar de mayor a menor precio 
+WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, "/html/body/main/div/div[2]/section/div[2]/div/div/div/div[2]/div/div/div/div/div/ul/li[3]/div/div/span"))).click() #Seleccionar la opcio de  Mayor a menor precio 
 
 
-WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div.poly-card")))
+WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, "div.poly-card"))) 
 
 products = driver.find_elements(By.CSS_SELECTOR, "div.poly-card")[:5]
-
+###/////////////////////////////////////////////////////////////###
 print("\n Los primeros 5 productos: \n")
 for i, product in enumerate(products, 1):
     try:
