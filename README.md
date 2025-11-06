@@ -1,23 +1,32 @@
 # Selenium-Test-
 Tests using Selenium WebDriver programmed in Python. 
 
-#El siguiente código realiza las siguientes acciones:
+# What this code does
 
-1.- Abre la URL de Mercado Libre
-2.- Selecciona el País, el cual es México para este ejemplo.
-3.- Introduce en la barra de búsqueda "Playstation 5" e inicia la búsqueda.
-4.- Aplica filtros al seleccionar las etiquetas de nuevo y local
-5.- Ordena los resultados de Mayor a menor Precio
-6.- Guarda los primeros 5 elementos y los muestra en consola.
+The following script performs the following actions:
 
-#Requisitos para ejecutar el codigo: 
-1.- Python instalado (Version 3.X recomandadada)
-2.- Google Chrome instaldo 
-3.- Archivo chromedriver.exe en la misma carpeta donde se guardara el archivo .py de este repositorio.
-4.- Las versiones de Chrome y de chromedriver deben coincidir, se suguiere descargar la version más actual de chromedriver y actualizar el navegador (Chrome)
+1. Opens Mercado Libre.
+2. Selects the country (Mexico in this example).
+3. Types **"Playstation 5"** into the search bar and starts the search.
+4. Applies filters by selecting **New** and **Local**.
+5. Sorts the results from **highest price to lowest price**.
+6. Saves the first 5 items and prints them in the console.
 
-#Como ejecutar el Script
-1.- Clona o descarga este repositorio.
-2.- Asegúrate de que el archivo chromedriver.exe esté en la misma carpeta que el script Test_Mercado_libre.py.
-3.- Instala las dependencias necesarias (pip install selenium)
-4.- Ejecuta el Script (python Test_Mercado_libre.py)
+---
+
+## Requirements to run this script
+
+- Python installed (Version 3.X recommended)
+- Google Chrome installed
+- `chromedriver.exe` file in the same folder where the Python script is located
+- Chrome and Chromedriver versions **must match**  
+  (It's recommended to download the latest chromedriver and update Chrome as well)
+
+---
+
+## How to run the script
+
+1. Clone or download this repository.
+2. Make sure `chromedriver.exe` is in the same folder as the script `Test_Mercado_libre.py`.
+3. Install dependencies: `pip install selenium`
+4. Run the script: ` python Test_Mercado_libre.py`
